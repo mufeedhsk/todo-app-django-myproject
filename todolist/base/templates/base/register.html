@@ -1,0 +1,24 @@
+{% extends 'base/main.html' %}
+{% block title %}- log in or register{% endblock title %}
+{% block content %}
+
+<div class="register-body">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <label for="">{{ form.username.label }}</label>
+        {{ form.username }}
+        
+        <label for="">{{ form.password1.label }}</label>
+        {{ form.password1 }}
+
+        <label for="">{{ form.password2.label }}</label>
+        {{ form.password2 }}
+
+        <input class="register-btn2" style="margin-top:10px;" type="submit" value="Register">
+    </form>
+    <p>Already have an Accout?</p>
+    <a class="login-btn2" href="{% url 'login' %}">Login</a>    
+</div>
+
+
+{% endblock content %}

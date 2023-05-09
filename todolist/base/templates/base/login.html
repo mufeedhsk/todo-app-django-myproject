@@ -1,0 +1,14 @@
+{% extends 'base/main.html' %}
+{% block title %}- log in or register{% endblock title %}
+{% block content %}
+<div class="login-body">
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="login-btn" type="submit" value="Login">
+    </form>
+    <hr>
+    <p>Don't have an Account?</p><a class="register-btn" href="{% url 'register' %}">Register</a>
+</div>
+
+{% endblock content %}
