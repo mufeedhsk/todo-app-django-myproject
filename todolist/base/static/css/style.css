@@ -4,10 +4,11 @@
     box-sizing: border-box;
 }
 body{
+    background: linear-gradient(132deg, rgb(34, 181, 254) 0.00%, rgb(255, 186, 214) 100.00%);
     display: flex;
     justify-content: center;
     padding-top: 50px;
-    background-color: #95e8d7;
+    padding-bottom: 350px;
 }
 
 .container{
