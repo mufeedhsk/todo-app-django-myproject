@@ -3,21 +3,31 @@
 {% block content %}
 
 <div class="register-body">
-    <form method="POST" action="">
-        {% csrf_token %}
-        <label for="">{{ form.username.label }}</label>
-        {{ form.username }}
-        
-        <label for="">{{ form.password1.label }}</label>
-        {{ form.password1 }}
-
-        <label for="">{{ form.password2.label }}</label>
-        {{ form.password2 }}
-
-        <input class="register-btn2" style="margin-top:10px;" type="submit" value="Register">
-    </form>
-    <p>Already have an Accout?</p>
-    <a class="login-btn2" href="{% url 'login' %}">Login</a>    
+    <div>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <label for="">{{ form.username.label }}</label>
+            {{ form.username }}
+            
+            <label for="">{{ form.password1.label }}</label>
+            {{ form.password1 }}
+    
+            <label for="">{{ form.password2.label }}</label>
+            {{ form.password2 }}
+    
+            <div class="btn-wrapper">
+                <input class="button button-2" style="margin-top:10px;" type="submit" value="Register">
+            </div>
+        </form>
+        <hr>
+        <div class="btn-wrapper">
+            <p style="margin-left:-10px">Already have an Account?</p>
+        </div>
+        <div class="btn-wrapper">
+            <a class="button button-1 login-btn-2" href="{% url 'login' %}">Login</a>
+        </div>      
+    </div>
+  
 </div>
 
 
